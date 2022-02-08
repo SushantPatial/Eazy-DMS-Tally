@@ -9,16 +9,12 @@
 	padding: 0;
 	--color-1: #d12231;
 	--color-2: #0e4380;
+	--color-3: #062952;
 }
 html {
-	height: 100%;
-	overflow-x: hidden;
-}
-html:focus-within {
-  scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 body {
-	color: #888888;
 	font-size: 15px;
 	font-family: "Open Sans", sans-serif;
 	height: 100%;
@@ -45,10 +41,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .section-padding {
-	padding: 100px 0px;
+	padding: 50px 0px;
 }
 .section-title {
-	padding-bottom: 80px;
+	padding-bottom: 50px;
 }
 .section-title h3 {
 	color: var(--color-2);
@@ -61,7 +57,7 @@ h1, h2, h3, h4, h5, h6 {
 	margin: 15px auto 20px;
 }
 .section-title-line {
-	background: #ddd;
+	background: #ccc;
 	content: "";
 	height: 1px;
 	position: absolute;
@@ -72,7 +68,7 @@ h1, h2, h3, h4, h5, h6 {
 	background: var(--color-1);
 	bottom: -1px;
 	content: "";
-	height: 2px;
+	height: 3px;
 	left: calc(50% - 22px);
 	position: absolute;
 	width: 45px;
@@ -106,11 +102,8 @@ h1, h2, h3, h4, h5, h6 {
 	line-height: 25px;
 }
 
-.bg-grey {
-	background-color: #fafafa;
-}
-.bg-white {
-	background: #ffffff;
+.section-bg {
+	background-color: #e3f3fd;
 }
 
 /* Nav */
@@ -127,7 +120,7 @@ h1, h2, h3, h4, h5, h6 {
 	z-index: 1030;
 }
 
-.navbar .navbar-brand {
+.navbar .navbar-brand img {
 	width: 100px;
 }
 .navbar .nav-item {
@@ -135,9 +128,15 @@ h1, h2, h3, h4, h5, h6 {
 	padding: 0;
 	font-size: 16px;
 }
+.navbar .nav-item .nav-link {
+	color: #fff;
+	transition: 0.5s ease;
+}
+.navbar .nav-item .nav-link:hover {
+	color: var(--color-1);
+}
 .navbar .nav-item .active {
 	color: var(--color-1);
-	transition: 0.5s ease;
 }
 .navbar .nav-item a {
 	color: #ddd;
@@ -147,6 +146,11 @@ h1, h2, h3, h4, h5, h6 {
 .navbar .nav-link {
 	position: relative;
 	padding: 0;
+}
+.navbar .nav-item a i {
+	font-size: 30px;
+	position: relative;
+	top: 5px;
 }
 .navbar .navbar-toggler {
 	cursor: pointer;
@@ -158,7 +162,7 @@ h1, h2, h3, h4, h5, h6 {
 	display: none;
 }
 .nav-scroll {
-	background: #fff;
+	background:  var(--color-3);
 	-webkit-box-shadow: 0 1px 8px 3px rgba(0, 0, 0, 0.178);
 	box-shadow: 0 1px 8px 3px rgba(0, 0, 0, 0.164);
 	-webkit-transition: all .4s ease;
@@ -186,25 +190,31 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Hero */
 .banner {
-	background:url(../images/bg1.jpg) no-repeat 0% 0% / 100% 100%;
+	/* background: url(../images/bg-1.jpg);
+	background-position: center;
+	background-size: cover; */
 	color:#ffffff;
 	text-align: center;
 	width: 100%;
-	height: 500px;
-	border-radius: 0 0 50% 50%;
-	transform: scale(1.5);
+	height: 100%;
 	overflow: hidden;
+	position: relative;
+	top: 90px;
+}
+.banner img {
+	width: 100%;
 }
 .banner-overlay {
-	background:linear-gradient(to bottom, rgba(2, 22, 65, 0.87)0%, #0e4380 100%);
-	height: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
 .banner .container {
-	margin-top: 100px;
-	transform: scale(0.8);
+	width: 50%;
+	margin-top: 150px;
+	padding: 30px 10px;
+	border-radius: 20px;
+	background-color: #062a5260;
 }
 .banner h1 {
 	color:#ffffff;
@@ -285,7 +295,7 @@ h1, h2, h3, h4, h5, h6 {
 	background-image: linear-gradient(315deg, #b8c6db 0%, #838383 74%);
 	color: #222;
 }
-.pricing .row .col-lg-6:nth-child(3) .pricing-box {
+.pricing .row .col-md-6:nth-child(3) .pricing-box {
 	background-color: #facc6b;
 	background-image: linear-gradient(315deg, #facc6b 0%, #d49d2d 74%);
 }
@@ -318,27 +328,20 @@ h1, h2, h3, h4, h5, h6 {
 	margin: 20px 0;
 	font-family: 'Open Sans', sans-serif;
 }
+.pricing .pricing-box button {
+	padding: 10px 20px;
+	margin-top: 20px;
+	background-color: transparent;
+	border: 2px solid #222;
+	color: #fff;
+	background-color: #222;
+	text-transform: uppercase;
+	font-weight: 700;
+	cursor: pointer;
+}
 
-.pricing .other-details h3 {
-	color: var(--color-2);
-	font-weight: 500;
-	margin-bottom: 30px;
-	margin-top: 30px;
-	position: relative;
-	z-index: 1;
-  padding-left: 55px;
-}
-.pricing .other-details h3:after {
-	position: absolute;
-	left: 10px;
-	top: 50%;
-	content: "";
-	height: 2px;
-	width: 30px;
-	background: var(--color-1);
-	margin-top: -1px;
-}
-.pricing .other-details ol li {
+/* Other Details */
+.other-details ol li {
 	margin-left: 30px;
 	list-style-type: disc !important;
 	font-size: 20px;
@@ -347,7 +350,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Footer */
 .footer-copy {
-	background: var(--color-2);
+	background: var(--color-3);
 	color: #ffffff;
 	text-align: center;
 	padding: 20px 0px;
@@ -356,11 +359,16 @@ h1, h2, h3, h4, h5, h6 {
 	margin-bottom: 0;
 }
 
+
 /* Media  Queries */
+@media (max-width: 991px) {
+.navbar .navbar-collapse {
+    overflow: hidden;
+    color: #fff !important;
+		margin-left: 20px;
+    padding: 10px 0;
+}}
 @media all and (max-width:991px) {
-	.navbar .navbar-nav {
-		flex-direction: row;
-	}
 	.banner .container {
 		width: 600px
 	}

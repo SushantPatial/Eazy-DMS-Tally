@@ -19,17 +19,23 @@
 
     <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg nav-scroll">
       <div class="container"> 
         <a class="navbar-brand navbar-logo" href="#"> 
           <img src="images/logo-white.png" alt="logo" class="logo-1"> 
         </a>
         
-        <div class="" id="navbarSupportedContent">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> 
+          <span class="fas fa-bars" style="color: #fff"></span> 
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item"> <a class="nav-link">Home</a> </li>
-            <li class="nav-item"> <a class="nav-link">About</a> </li>
-            <li class="nav-item"> <a class="nav-link">Pricing</a> </li>
+            <li class="nav-item"> <a class="nav-link" href="#">Home</a> </li>
+            <li class="nav-item"> <a class="nav-link" href="#about">About</a> </li>
+            <li class="nav-item"> <a class="nav-link" href="#pricing">Pricing</a> </li>
+            <li class="nav-item"> <a class="nav-link" href="#other-details">Other Details</a> </li>
+            <li class="nav-item"> <a class="nav-link" href="#"><i class="fad fa-shopping-cart"></i></a></li>
           </ul>
         </div>
       </div>
@@ -38,13 +44,15 @@
 
     <!-- Banner Image -->
 
-    <div class="banner text-center" id="home" data-scroll-index='0'>
+    <div class="banner text-center" id="home">
+      <img src="images/bg-1.jpg">
       <div class="banner-overlay">
-        <div class="container">
+        <!-- <div class="container">
           <h1 class="text-capitalize">MDH TIES UP WITH TALLY</h1>
           <h4>45% Discount for SS and Distributors of MDH</h4>
           <h6>ONCE IN A LIFETIME CHANCE TO BUY LICENSED TALLY AT AN UNBELIEVABLE DISCOUNT</h6>
-          <a href="#" class="banner-btn">Get Started</a> </div>
+          <a href="#" class="banner-btn">Get Started</a> 
+        </div> -->
       </div>
     </div>
 
@@ -52,10 +60,10 @@
 
     <!-- About -->
 
-    <div class="about-us section-padding" id="about" data-scroll-index='1'>
+    <div class="about-us section-padding section-bg" id="about">
       <div class="container">
         <div class="row">
-          <div class="col-md-7 mb-50">
+          <div class="col-lg-7 mb-50">
             <div class="section-info">
               <h3>BENEFITS OF TALLY PRIME</h3>
               <ul>
@@ -78,8 +86,10 @@
               </ul>
             </div>
           </div>
-          <div class="col-md-5 mb-50">
-            <div class="section-img"> <img src="images/tally-prime.png" alt="" class="img-responsive"/> </div>
+          <div class="col-lg-5 mb-50">
+            <div class="section-img"> 
+              <img src="images/tally-prime.png" alt="" style="width: 100%"/> 
+            </div>
           </div>
         </div>
       </div>
@@ -88,16 +98,16 @@
     <!-- End About --> 
 
     <!-- Services -->
-    <div class="pricing section-padding bg-grey" id="pricing" data-scroll-index='2'>
+    <div class="pricing section-padding" id="pricing">
       <div class="container">
-        <div class="row">
+        <div class="row" style="display: flex; align-items: center; justify-content: center;">
 
           <div class="col-md-12 section-title text-center">
             <h3>Pricing</h3>
             <span class="section-title-line"></span> 
           </div>
 
-          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 mb-30">
+          <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 mb-30">
             <div class="pricing-box bg-white text-center">
               <div class="icon-text">
                 <h4 class="title-box">TALLY PRIME SINGLE USER</h4>
@@ -108,11 +118,13 @@
                   <li>+ FREE Online Installation</li>
                   <li>+ FREE One Training Webinar</li>
                 </ul>
+
+                <button name="add-silver" class="add add-silver">Add To Cart</button>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 mb-30">
+          <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 mb-30">
             <div class="pricing-box bg-white text-center">
                 <h4 class="title-box">TALLY PRIME MULTI USER</h4>
                 <h5>GOLD EDITION</h5>
@@ -122,25 +134,39 @@
                   <li>+ FREE Online Installation</li>
                   <li>+ FREE One Training Webinar</li>
                 </ul>
+
+                <button name="add-gold" class="add add-gold">Add To Cart</button>
             </div>
           </div>
 
         </div>
-
-        <div class="other-details">
-          <h3>Other Details</h3>
-          <ol>
-            <li>After successful payment, our representative will reach out to you for further installation</li>
-            <li>Installations will be done Online</li>
-            <li>AMC is <strong>NOT</strong> included in this plan</li>
-          </ol>
-        </div>
       </div>
     </div>
-
     <!-- End Services --> 
 
+    <!-- Other Details -->
+    <div class="other-details section-padding section-bg" id="other-details">
+      <div class="container">
+        <div class="row">
 
+          <div class="col-md-12 section-title text-center">
+            <h3>Other Details</h3>
+            <span class="section-title-line"></span> 
+          </div>
+
+        </div>
+
+        <ol>
+          <li>After successful payment, our representative will reach out to you for further installation</li>
+          <li>Installations will be done Online</li>
+          <li>AMC is <strong>NOT</strong> included in this plan</li>
+        </ol>
+
+      </div> 
+    </div>
+    <!-- End Other Detials --> 
+
+    <!-- Footer -->
     <footer class="footer-copy">
       <div class="container-fluid">
         <div class="row">
@@ -150,9 +176,9 @@
         </div>
       </div>
     </footer>
+    <!-- Footer Ends -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdn.statically.io/gh/kswedberg/jquery-smooth-scroll/3948290d/jquery.smooth-scroll.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script> 
     <!-- Custom JS -->
     <script src="js/script.js"></script>

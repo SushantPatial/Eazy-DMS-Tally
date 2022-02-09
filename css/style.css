@@ -338,15 +338,43 @@ main {
 /* Pricing */
 .pricing .pricing-box {
 	padding: 40px;
+	padding-bottom: 50px;
 	border-radius: 4px;
 	-webkit-box-shadow: 0px 5px 25px 0px rgba(58, 57, 97, 0.466);
 	box-shadow: 0px 5px 25px 0px rgba(58, 57, 97, 0.466);
-	background-color: #bdd4e7;
-	background-image: linear-gradient(315deg, #afbac4 0%, #7f848f 74%);	
+	background-color: #9fabb6;
+	background-image: linear-gradient(315deg, #9fabb6 0%, #5c6169 74%);	
 	color: #fff;
+	position: relative;
+	overflow: hidden;
+}
+.pricing .pricing-box:after {
+	content: "";
+	position: absolute;
+	z-index: 4;
+	top: 0px;
+	left: 0px;
+	width: 0%;
+	height: 100%;
+	background-color: rgba(255,255,255,0.4);
+	-webkit-transition: none;
+	-moz-transition: none;
+	-ms-transition: none;
+	-o-transition: none;
+	transition: none;
+}
+.pricing .pricing-box:hover:after {
+	width: 120%;
+	background-color: rgba(255,255,255,0);
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-ms-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
 }
 .pricing .row .col-md-6:nth-child(3) .pricing-box {
-	background-image: linear-gradient(315deg, #f8c351 0%, #d6991f 74%);
+	background-color: #f8c351;
+	background-image: linear-gradient(315deg, #f8c351 0%, #c78d19 74%);
 } 
 .pricing .pricing-box h4 {
 	font-size: 24px;
@@ -362,22 +390,19 @@ main {
 	bottom: 0;
 	left: 0;
 	width: 60px;
-	height: 2px;
+	height: 3px;
 	background-color: var(--color-1);
 	left: calc(50% - 30px);
 }
 .pricing .pricing-box h5 {
-	color: rgb(183, 195, 199);
-	font-size: 24px;
+	color: #dbe5e9;
+	font-family: 'Dancing Script', cursive;
+	font-size: 42px;
 	letter-spacing: 2px;
-	/* text-shadow: 0px 0px 10px #cfcfcfbe; */
 	margin-top: 30px;
-	font-family: 'Open Sans', sans-serif;
 }
 .pricing .row .col-md-6:nth-child(3) .pricing-box h5 {
-	color: #ffd684;
-	/* text-shadow: 0px 0px 10px #f0bd58; */
-	font-family: 'Open Sans', sans-serif;
+	color: #ffecc7;
 }
 .pricing .pricing-box h6 {
 	color: #eee;
@@ -401,7 +426,8 @@ main {
 .pricing .pricing-box ul li {
 	position: relative;
 	margin: 30px 0;
-	font-weight: 500;
+	font-weight: 600;
+	font-size: 18px;
 }
 .pricing .pricing-box ul li:after {
 	content: '';
@@ -420,6 +446,8 @@ main {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	position: relative;
+	z-index: 10;
 }
 .plus-minus .count-display {
 	width: 40px;
@@ -438,7 +466,7 @@ main {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	border: 1px solid #222;
+	border: none;
 	color: #fff;
 	background-color: #222;
 	cursor: pointer;
@@ -475,7 +503,7 @@ a.anchor {
 	align-items: center;
 }
 .other-details .row .col-lg-4:nth-child(3) .other-detail {
-	background-color: var(--color-2);
+	background-color: var(--color-4);
 }
 .other-details .other-detail .other-icon {
 	min-width: 55px;

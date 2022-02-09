@@ -30,4 +30,5 @@ $(document).ready(function(){
   }); 
 });
 
-  
+// Year
+$('#year').html(new Date().getFullYear());

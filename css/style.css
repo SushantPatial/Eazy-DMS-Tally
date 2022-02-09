@@ -510,7 +510,10 @@ a.anchor {
 	color: #ffffff;
 	text-align: center;
 	padding: 20px 0px;
+	margin-top: 60px;
 	width: 100%;
+	position: relative;
+	bottom: -30px;
 }
 .footer-copy p {
 	margin-bottom: 0;

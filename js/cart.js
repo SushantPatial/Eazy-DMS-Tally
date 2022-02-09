@@ -34,3 +34,6 @@ $(document).ready(function() {
     $('.cart-total').html(silverTotal + goldTotal); 
   })
 })
+
+// Year
+$('#year').html(new Date().getFullYear());

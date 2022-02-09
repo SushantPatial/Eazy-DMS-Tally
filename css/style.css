@@ -10,6 +10,7 @@
 	--color-1: #d12231;
 	--color-2: #0e4380;
 	--color-3: #062952;
+	--color-4: #a31723;
 }
 html {
 	scroll-behavior: smooth;
@@ -306,7 +307,7 @@ main {
 	transition: 0.3s ease;
 }
 .about-us .benefits-box:hover {
-	background-color: var(--color-1);
+	background-color: var(--color-4);
 }
 .about-us .benefits-box .benefits-content {
 	position: relative;
@@ -340,11 +341,12 @@ main {
 	border-radius: 4px;
 	-webkit-box-shadow: 0px 5px 25px 0px rgba(58, 57, 97, 0.466);
 	box-shadow: 0px 5px 25px 0px rgba(58, 57, 97, 0.466);
-	background-color: #ffffff;
-	color: #222;
+	background-color: #bdd4e7;
+	background-image: linear-gradient(315deg, #afbac4 0%, #7f848f 74%);	
+	color: #fff;
 }
 .pricing .row .col-md-6:nth-child(3) .pricing-box {
-	background-color: var(--color-1);
+	background-image: linear-gradient(315deg, #f8c351 0%, #d6991f 74%);
 } 
 .pricing .pricing-box h4 {
 	font-size: 24px;
@@ -352,7 +354,7 @@ main {
 	margin: 10px 0px;
 	position: relative;
 	padding-bottom: 14px;
-	color: var(--color-1);
+	color: #fff;
 }
 .pricing .pricing-box h4:after {
 	content: '';
@@ -361,14 +363,11 @@ main {
 	left: 0;
 	width: 60px;
 	height: 2px;
-	background-color: #bcbcbc;
+	background-color: var(--color-1);
 	left: calc(50% - 30px);
 }
-.pricing .row .col-md-6:nth-child(3) .pricing-box h4 {
-	color: #fff;
-}
 .pricing .pricing-box h5 {
-	color: #a8a8a8;
+	color: rgb(183, 195, 199);
 	font-size: 24px;
 	letter-spacing: 2px;
 	/* text-shadow: 0px 0px 10px #cfcfcfbe; */
@@ -376,24 +375,21 @@ main {
 	font-family: 'Open Sans', sans-serif;
 }
 .pricing .row .col-md-6:nth-child(3) .pricing-box h5 {
-	color: #fabc3c;
+	color: #ffd684;
 	/* text-shadow: 0px 0px 10px #f0bd58; */
 	font-family: 'Open Sans', sans-serif;
 }
 .pricing .pricing-box h6 {
-	color: #222;
+	color: #eee;
 	margin-top: 20px;
 	font-size: 20px;
 	font-family: 'Open Sans', sans-serif;
-}
-.pricing .row .col-md-6:nth-child(3) .pricing-box h6 {
-	color: #ddd;
 }
 .pricing .pricing-box h6 span {
 	text-decoration: line-through !important;
 }
 .pricing .pricing-box h3 {
-	color: var(--color-1);
+	color: #fff;
 	font-size: 38px;
 	margin: 30px 0;
 	margin-bottom: 50px;
@@ -405,6 +401,7 @@ main {
 .pricing .pricing-box ul li {
 	position: relative;
 	margin: 30px 0;
+	font-weight: 500;
 }
 .pricing .pricing-box ul li:after {
 	content: '';
@@ -413,7 +410,7 @@ main {
 	left: 0;
 	width: 100%;
 	height: 1px;
-	background-color: #d6d6d6;
+	background-color: #e0e0e0;
 }
 .pricing .row .col-md-6:nth-child(3) .pricing-box ul li {
 	color: #fff;
@@ -428,6 +425,7 @@ main {
 	width: 40px;
 	height: 40px;
 	background-color: #e0e0e0;
+	color: #222;
 	font-weight: 600;
 	display: flex;
 	align-items: center;

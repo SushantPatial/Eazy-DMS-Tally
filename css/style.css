@@ -459,7 +459,7 @@ main {
 	align-items: center;
 	justify-content: center;
 }
-.plus-minus button {
+.plus-minus .button {
 	width: 40px;
 	height: 40px;
 	background-color: white;
@@ -470,6 +470,18 @@ main {
 	color: #fff;
 	background-color: #222;
 	cursor: pointer;
+}
+.add-to-cart-button {
+	position: relative;
+	z-index: 10;
+	cursor: pointer;
+	margin-top: 20px;
+	background-color: #ffffff3b;
+	padding: 10px 20px;
+	border: 2px solid #222;
+	color: #222;
+	font-weight: 700;
+	text-transform: uppercase;
 }
 /* .pricing .pricing-box button {
 	padding: 10px 20px;
